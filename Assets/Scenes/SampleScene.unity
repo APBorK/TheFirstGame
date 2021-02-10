@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 19203819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -52.183, y: 2.75, z: 0.192}
-  m_LocalScale: {x: 6.7589183, y: 0, z: 7.676717}
+  m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a607b1d351b94f149a680a4dbb3f260f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: {fileID: 19203820}
+  spawn: {fileID: 19203820}
   objToSpawn: {fileID: 4271104679393704886, guid: 14005d530146fd8489eec7342377d9f5,
     type: 3}
 --- !u!1 &108023975
@@ -565,7 +565,7 @@ Transform:
   m_GameObject: {fileID: 400494789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.078, y: 2.1, z: 52.223}
-  m_LocalScale: {x: 8.160675, y: 0, z: 6.385719}
+  m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a607b1d351b94f149a680a4dbb3f260f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: {fileID: 400494790}
+  spawn: {fileID: 400494790}
   objToSpawn: {fileID: 4271104679393704886, guid: 14005d530146fd8489eec7342377d9f5,
     type: 3}
 --- !u!1 &477278422
@@ -4529,8 +4529,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887367937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54.278, y: 1.27, z: -0.573}
-  m_LocalScale: {x: 8.389389, y: 0, z: 10.751099}
+  m_LocalPosition: {x: 54.278, y: 2.78, z: -0.573}
+  m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -4547,7 +4547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a607b1d351b94f149a680a4dbb3f260f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: {fileID: 1887367938}
+  spawn: {fileID: 1887367938}
   objToSpawn: {fileID: 4271104679393704886, guid: 14005d530146fd8489eec7342377d9f5,
     type: 3}
 --- !u!1 &1917841720
