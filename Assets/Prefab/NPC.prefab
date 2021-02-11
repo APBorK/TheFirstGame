@@ -14,10 +14,11 @@ GameObject:
   - component: {fileID: 5581626885115877283}
   - component: {fileID: 3991613108691980566}
   - component: {fileID: 3609496849262324908}
-  - component: {fileID: -5155856250268044150}
+  - component: {fileID: 3965796360472605956}
+  - component: {fileID: 5525370968340480304}
   m_Layer: 0
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: Bot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +135,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-5155856250268044150
+--- !u!114 &3965796360472605956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,10 +147,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832011abc8973be438e0b97fe85181e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatCanBeClickedOn:
-    serializedVersion: 2
-    m_Bits: 256
-  move:
-  - {fileID: 4231333157109682925, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
-  - {fileID: 655275666604230681, guid: 8cde059e696bc0a4a94a1da9248b6c9d, type: 3}
-  - {fileID: 238227839564584921, guid: c168d933770ed7043b5320697fd72091, type: 3}
+  activeDistance: 0.00001
+  wayPoints: []
+  stoppingDistance: 0.0002
+  timeWait: 3
+  rotationSpeed: 5
+  defLook: {fileID: 4231333157109682925, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
+--- !u!114 &5525370968340480304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4271104679393704886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7cc02540a64764d9d3f789eaa6e2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

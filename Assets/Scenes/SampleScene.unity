@@ -597,9 +597,9 @@ GameObject:
   - component: {fileID: 477278425}
   - component: {fileID: 477278424}
   - component: {fileID: 477278423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn_NPC_Level3
-  m_TagString: Spawn3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -1070,8 +1070,8 @@ MonoBehaviour:
   spawn: {fileID: 643130377}
   objToSpawn:
   - {fileID: 6203799725997512564, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
-  - {fileID: 328067824468090957, guid: 8cde059e696bc0a4a94a1da9248b6c9d, type: 3}
-  - {fileID: 5699251267080898800, guid: c168d933770ed7043b5320697fd72091, type: 3}
+  - {fileID: 6203799725997512564, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
+  - {fileID: 6203799725997512564, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,9 +1362,9 @@ GameObject:
   - component: {fileID: 805520430}
   - component: {fileID: 805520429}
   - component: {fileID: 805520428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn_NPC_Level2
-  m_TagString: Spawn2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -4069,9 +4069,9 @@ GameObject:
   - component: {fileID: 1651114139}
   - component: {fileID: 1651114138}
   - component: {fileID: 1651114137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Spawn_NPC_Level1 '
-  m_TagString: Spawn1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5229,6 +5229,11 @@ PrefabInstance:
     - target: {fileID: 1084027730952982019, guid: 58855562382ae6a45855c8b530d824f1,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084027730952982019, guid: 58855562382ae6a45855c8b530d824f1,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1084027730952982025, guid: 58855562382ae6a45855c8b530d824f1,
