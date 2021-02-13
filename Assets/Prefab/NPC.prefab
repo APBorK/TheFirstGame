@@ -111,7 +111,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!195 &3609496849262324908
 NavMeshAgent:
@@ -147,12 +147,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832011abc8973be438e0b97fe85181e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeDistance: 0.00001
-  wayPoints: []
-  stoppingDistance: 0.0002
+  wayPoints:
+  - {fileID: 4231333157109682925, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
+  - {fileID: 4231333157109682925, guid: 7e98f598fd82c13458742f6be3765a9d, type: 3}
+  - {fileID: 4231333157109682925, guid: 35f1c60b046942f47b24799585bc8a39, type: 3}
+  stoppingDistance: 5
   timeWait: 3
   rotationSpeed: 5
   defLook: {fileID: 4231333157109682925, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
+  activeDistance: 10
+  speed: 3
 --- !u!114 &5525370968340480304
 MonoBehaviour:
   m_ObjectHideFlags: 0

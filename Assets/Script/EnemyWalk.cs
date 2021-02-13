@@ -6,24 +6,28 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 
-public class NPCWalk : MonoBehaviour {
-
-    public float activeDistance = 0.4F;
+public class EnemyWalk : MonoBehaviour {
+    
     public Transform[] wayPoints;
-    public float stoppingDistance = 0.8F;
+    public float stoppingDistance = 5;
     public float timeWait = 3;
     public float rotationSpeed = 5;
     public Transform defLook;
+    public float activeDistance = 10f;
+    public float speed;
     
-    private NavMeshAgent _myAgent;
     private Vector3 _target;
     private float _curTimeout;
     private int _wayCount;
     private bool _isTarget;
+    
+
+    private NavMeshAgent _myAgent;
 
     void Start () 
     {
         _myAgent = GetComponent<NavMeshAgent>();
+        
     }
 
     void SetRotation(Vector3 lookAt)
@@ -34,10 +38,11 @@ public class NPCWalk : MonoBehaviour {
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
 
-    void Update () 
+    void Update ()
     {
-        _target = PlayerInfo.player.position;
-        float dis = Vector3.Distance (transform.position, PlayerInfo.player.position);
+        var position = PlayerInfo.player.position;
+        _target = position;
+        float dis = Vector3.Distance (transform.position, position);
         if(dis < activeDistance)
         {
             _isTarget = true;
@@ -51,17 +56,13 @@ public class NPCWalk : MonoBehaviour {
             {
                 SetRotation(defLook.position);
                 _curTimeout += Time.deltaTime;
-                if (_curTimeout > timeWait)
+                if(_curTimeout > timeWait)
                 {
-                    _curTimeout = 0;
-                    if (_wayCount < wayPoints.Length - 1)
-                    {
-                        _wayCount++;
-                    }
-                    else
-                    {
-                        _wayCount = 0;
-                    }
+                    _curTimeout = 0; 
+                    if(_wayCount < wayPoints.Length-1)
+                        _wayCount++; 
+                    else _wayCount = 0;
+                    
                 }
             }
         }
@@ -71,6 +72,5 @@ public class NPCWalk : MonoBehaviour {
             _myAgent.SetDestination(_target);
             if(_myAgent.velocity == Vector3.zero) SetRotation(_target);
         }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,5 +19,13 @@ public class SpawnNPC : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void OnCollisionEnter(Collision otherObj)
+    {
+        if (otherObj.gameObject.tag == "Bot")
+        {
+            
+        }
     }
 }

@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
     public LayerMask whatCanBeClickedOn;
+    public float distance = 100f;
     private NavMeshAgent myAgents;
     private float speed = 8f;
+    
 
     void Start()
     {
@@ -17,24 +17,30 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Движение
         if (Input.GetMouseButton(0))
         {
-            Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-            if (Physics.Raycast(myRay,out hitInfo,100,whatCanBeClickedOn))
-            {
-                myAgents.SetDestination(hitInfo.point);
-            }
-
-            myAgents.speed = speed;
+            MovePlayer();
         }
         if (Input.GetMouseButton(1))
         {
-            myAgents.speed = speed * 2;
+            RunPlayer();
         }
-        //...
-        
-        
+    }
+
+    private void MovePlayer()
+    {
+        Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitInfo;
+        if (Physics.Raycast(myRay,out hitInfo,distance,whatCanBeClickedOn))
+        {
+            myAgents.SetDestination(hitInfo.point);
+        }
+
+        myAgents.speed = speed;
+    }
+
+    private void RunPlayer()
+    {
+        myAgents.speed = speed * 2;
     }
 }

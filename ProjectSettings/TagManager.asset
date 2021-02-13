@@ -7,6 +7,9 @@ TagManager:
   - Wall
   - Bot
   - Gun
+  - Point
+  - Spawn1
+  - SpawnPoint1
   layers:
   - Default
   - TransparentFX

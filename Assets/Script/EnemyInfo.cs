@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCInfo : MonoBehaviour
+public class EnemyInfo : MonoBehaviour
 {
     public static Transform bot;
 
