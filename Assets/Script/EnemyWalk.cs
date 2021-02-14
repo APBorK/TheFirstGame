@@ -10,18 +10,22 @@ public class EnemyWalk : MonoBehaviour
     
     public float activeDistance = 10f;
     public float speed;
+    public Transform[] moveSpots;
+    public float startWaitTime;
     
     private Transform _target;
     private NavMeshAgent _myAgent;
-    private bool _isMove;
+    private int _randomSpot ;
+    private float _waitTime;
     
 
-    void Start () 
+    void Start ()
     {
+        _waitTime = startWaitTime;
         _myAgent = GetComponent<NavMeshAgent>();
-        _myAgent.SetDestination(Vector3.zero);
-
+        RandomWayPoint();
     }
+    
     
 
     void Update ()
@@ -33,16 +37,27 @@ public class EnemyWalk : MonoBehaviour
             transform.LookAt(_target.transform); 
             _myAgent.SetDestination(new Vector3(_target.position.x,_target.position.y,_target.position.z));
         }
-        if(!_isMove)
-        { 
-            
-          
+        else
+        {
+            transform.position =  Vector3.MoveTowards(transform.position, moveSpots[RandomWayPoint()].position,
+                speed * Time.deltaTime);
+            transform.LookAt(transform.position);
+            _myAgent.SetDestination(transform.position);
+            if (Vector3.Distance(transform.position,moveSpots[_randomSpot].position)< 0.2f)
+            {
+                RandomWayPoint();
+                _waitTime = startWaitTime;
+            }
+            else
+            {
+                _waitTime -= Time.deltaTime;
+            }
         }
-        
     }
 
-    void RandomWayPoint()
+    int RandomWayPoint()
     {
-        _myAgent.SetDestination(new Vector3(Random.Range(-95,95),_target.position.y,Random.Range(-95,95)));
+        _randomSpot = Random.Range(0, moveSpots.Length);
+        return 0;
     }
 }

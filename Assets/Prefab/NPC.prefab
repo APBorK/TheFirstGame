@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4271104679393704886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7, y: 3.64, z: 50.7}
+  m_LocalPosition: {x: 25.366917, y: 0.5000001, z: 38.37962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -147,16 +147,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832011abc8973be438e0b97fe85181e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {fileID: 4231333157109682925, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
-  - {fileID: 4231333157109682925, guid: 7e98f598fd82c13458742f6be3765a9d, type: 3}
-  - {fileID: 4231333157109682925, guid: 35f1c60b046942f47b24799585bc8a39, type: 3}
-  stoppingDistance: 5
-  timeWait: 3
-  rotationSpeed: 5
-  defLook: {fileID: 4231333157109682925, guid: 37cd880b92adcbd4792822c625524d5e, type: 3}
   activeDistance: 10
   speed: 3
+  moveSpots:
+  - {fileID: 8911037338052795253, guid: b057b9dbd97f86a44b90378e59f40ff6, type: 3}
+  - {fileID: 1617848892556084072, guid: 2786f0088301f9c45aca7dd6a0368cba, type: 3}
+  - {fileID: 4201112571097041794, guid: 8e63cc0b990a66941b4ceadc19cc1eff, type: 3}
+  - {fileID: 1758527250035589537, guid: e2042b076b8fcb8499729580f93f6a60, type: 3}
+  - {fileID: 6827462813472024567, guid: 5ce5aedf7b89a124790c720aa82c41fa, type: 3}
+  - {fileID: 3476642680903024178, guid: 133b0090f5805c44aa98782023fc4d62, type: 3}
+  - {fileID: 6038369339723677244, guid: cf4eff26d65213b4097a44d80e8531df, type: 3}
+  - {fileID: 6482240437419365884, guid: 9ab5d775aaa44bf4dbf1ac265503dcbe, type: 3}
+  - {fileID: 6219891284434044773, guid: f3d5d4ed8ee8cdb4095cbc0da926cabf, type: 3}
+  - {fileID: 7164901559532543856, guid: 82e98c0353d913146a00f2b4c6ae3f0d, type: 3}
+  - {fileID: 6174329465041157918, guid: c0144107739d87a4ba4514cf3451f411, type: 3}
+  - {fileID: 8867403458257786509, guid: 30a3ac83bedce764ebe18448033e23d5, type: 3}
+  - {fileID: 2365900627081740060, guid: 8e3089b7640e9ed409c3166dba7de30a, type: 3}
+  - {fileID: 8714177077888502389, guid: 681440b96246ecc4f9779cbbd5b4e574, type: 3}
+  startWaitTime: 3
 --- !u!114 &5525370968340480304
 MonoBehaviour:
   m_ObjectHideFlags: 0
