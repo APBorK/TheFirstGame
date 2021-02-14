@@ -10,6 +10,10 @@ TagManager:
   - Point
   - Spawn1
   - SpawnPoint1
+  - Spawn
+  - SpawnPoint3
+  - SpawnPoint2
+  - Spawn2
   layers:
   - Default
   - TransparentFX

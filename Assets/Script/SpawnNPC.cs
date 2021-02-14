@@ -20,12 +20,5 @@ public class SpawnNPC : MonoBehaviour
     {
 
     }
-
-    private void OnCollisionEnter(Collision otherObj)
-    {
-        if (otherObj.gameObject.tag == "Bot")
-        {
-            
-        }
-    }
+    
 }

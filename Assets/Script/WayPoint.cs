@@ -1,11 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WayPoint : MonoBehaviour
 {
     public Transform spawn;
-    public GameObject[] objToSpawn;
+    public GameObject ObjToSpawn;
+    public static int Contr;
 
     float _minX;
     float _minZ;
@@ -24,12 +27,24 @@ public class WayPoint : MonoBehaviour
         
         _maxZ = position.z + localScale.z / 2;
         _minZ = position.z - localScale.z / 2;
+        СreateWaypoints();
+    }
 
-        for (int i = 0; i < objToSpawn.Length; i++)
+    private void Update()
+    {
+        if (WayPointInfo.wayPoint == null && Contr == 1)
         {
-            Vector3 spawnPos = new Vector3(Random.Range(_minX,_maxX),spawn.position.y,Random.Range(_minZ,_maxZ));
-            Instantiate(objToSpawn[i], spawnPos, Quaternion.identity);
+            СreateWaypoints();
         }
     }
+
+    public void СreateWaypoints()
+    {
+        Vector3 spawnPosition = new Vector3(Random.Range(_minX,_maxX),spawn.position.y + 1,
+            Random.Range(_minZ,_maxZ));
+        Instantiate(ObjToSpawn, spawnPosition, Quaternion.identity);
+        Contr = 0;
+    }
+
     
 }
