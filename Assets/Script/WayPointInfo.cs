@@ -7,19 +7,25 @@ public class WayPointInfo : MonoBehaviour
 {
     public static Transform wayPoint;
     private Rigidbody _rigidbody;
+    
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-
-    void OnTriggerEnter(Collider bot)
+    private void Update()
     {
-        if (bot.gameObject.CompareTag("Spawn1"))
+        if (gameObject.CompareTag("Spawn1"))
         {
             wayPoint = GameObject.FindGameObjectWithTag("SpawnPoint1").transform;
         }
+    }
+
+
+    void OnTriggerEnter(Collider bot)
+    {
+       
 
          /*if (bot.gameObject.CompareTag("Spawn2"))
          {
