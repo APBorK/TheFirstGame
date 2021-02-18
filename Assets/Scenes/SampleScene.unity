@@ -981,8 +981,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89b30a8dd7a71f4490e841aacb5a34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedShoot: 0
   gun: {fileID: 605066376}
+  bullet: {fileID: 2350069729640505066, guid: fb01b6da9de46d543881333d70d1b773, type: 3}
+  attackDistance: 2
+--- !u!114 &605066381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605066375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b0e49cb2eba2749989efcce0bcb556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643130373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5344,7 +5357,7 @@ PrefabInstance:
     - target: {fileID: 1084027729840981051, guid: 58855562382ae6a45855c8b530d824f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.516
+      value: 0.491
       objectReference: {fileID: 0}
     - target: {fileID: 1084027729840981051, guid: 58855562382ae6a45855c8b530d824f1,
         type: 3}

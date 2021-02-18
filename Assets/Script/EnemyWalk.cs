@@ -35,7 +35,7 @@ public class EnemyWalk : MonoBehaviour
             _myAgent.SetDestination(new Vector3(_target.position.x,_target.position.y,_target.position.z));
         }
 
-        if (WayPoint.Contr == 0)
+        if (WayPoint.Contr == 0 && Vector3.Distance(transform.position, _target.transform.position) > activeDistance)
         {
             GoNPC();
         }

@@ -15,7 +15,7 @@ public class AttackEnemy : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, PlayerInfo.player.position) > attackDistance)
         {
-          
+            
         }
         
     }

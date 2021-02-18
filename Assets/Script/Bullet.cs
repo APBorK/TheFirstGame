@@ -7,42 +7,26 @@ using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
-    public float speedShoot = 10;
-    public float repulsion = 3;
-    public float damage = 25;
-
-    private Vector3 _lastPosition;
+    public int speed = 3;
+    
+    private Vector3 lastPos;
 
     private void Start()
     {
-        _lastPosition = transform.position;
+        lastPos = transform.position;
     }
 
     void Update()
     {
-       transform.Translate(Vector3.forward * (speedShoot * Time.deltaTime));
-       RaycastHit hitInfo;
-       if (Physics.Linecast(_lastPosition, transform.position, out hitInfo))
-       {
-           if (hitInfo.transform.tag == "Wall")
-           {
-               repulsion--;
-               speedShoot *= -1;
-               if (repulsion == 0)
-               {
-                   Destroy(gameObject);
-               }
-               
-           }
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        RaycastHit hitInfo;
 
-           /*if (hitInfo.transform.tag == "Bot")
-           {
-               hitInfo.transform.gameObject.GetComponent<BotHealth>().Hit(damage);
-               Destroy(gameObject);
-           }
-           */
-       }
+        Debug.DrawLine(lastPos, transform.position);
+        if (Physics.Linecast(lastPos, transform.position, out hitInfo))
+        {
+            print(hitInfo.transform.name);
 
-       _lastPosition = transform.position;
+        }
+        lastPos = transform.position;
     }
 }
