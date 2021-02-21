@@ -110,7 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6e0d90c4f9f374da7380cfa66a3cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
+  collisionMasck:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!135 &-8120333235491053618
 SphereCollider:
   m_ObjectHideFlags: 0
